@@ -17,7 +17,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             # Navigate to the project directory on the admin
-            cd /var/www/bnp/server
+            cd /var/www/quickhire/server
 
             # Fetch all updates from the remote repository
             git fetch --all
@@ -35,10 +35,10 @@ jobs:
             npm run build
 
             # Check if PM2 process exists, if so, restart it, otherwise start a new one
-            if pm2 describe bnp-server > /dev/null; then
-              pm2 restart bnp-server
+            if pm2 describe quickhire-server > /dev/null; then
+              pm2 restart quickhire-server
             else
-              pm2 start npm --name "bnp-server" -- start
+              pm2 start npm --name "quickhire-server" -- start
             fi
 
             # Save PM2 process list to ensure process persists

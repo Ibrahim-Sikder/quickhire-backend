@@ -1,21 +1,15 @@
 import express from 'express';
+
+import { AuthValidation } from './auth.validation';
 import { AuthController } from './auth.controller';
 import { validateRequest } from '../../middlewares/validateRequest';
-import { AuthValidation } from './auth.validation';
 
 const router = express.Router();
 
 router.post(
-  '/login/request-otp',
+  '/login',
   validateRequest(AuthValidation.loginValidationSchema),
-  AuthController.requestLoginOtp,
+  AuthController.loginUser,
 );
-
-router.post(
-  '/login/verify-otp',
-  AuthController.verifyLoginOtp,
-);
-
-router.post('/refresh-token', AuthController.refreshToken);
 
 export const authRoutes = router;

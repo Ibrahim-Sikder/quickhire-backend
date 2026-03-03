@@ -1,19 +1,15 @@
 import jwt, { JwtPayload } from 'jsonwebtoken';
 
-export interface TJwtPayload extends JwtPayload {
-  userId: string;
-  role: string;
-  name?: string;
-}
-
 export const createToken = (
-  jwtPayload: TJwtPayload,
-  secret: string,
+  jwtPayload: { userId: string; role: string },
+  secrete: string,
   expiresIn: string,
 ) => {
-  return jwt.sign(jwtPayload, secret, { expiresIn });
+  return jwt.sign(jwtPayload, secrete, {
+    expiresIn,
+  });
 };
 
 export const verifyToken = (token: string, secret: string) => {
-  return jwt.verify(token, secret) as TJwtPayload;
+  return jwt.verify(token, secret) as JwtPayload;
 };
