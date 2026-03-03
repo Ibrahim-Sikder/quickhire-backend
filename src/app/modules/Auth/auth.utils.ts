@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import jwt, { JwtPayload } from 'jsonwebtoken';
 
 export const createToken = (
-  jwtPayload: { userId: string; role: string },
-  secrete: string,
-  expiresIn: string,
+  jwtPayload: { userId: any; role: any },
+  secrete: any,
+  expiresIn: any,
 ) => {
   return jwt.sign(jwtPayload, secrete, {
     expiresIn,
