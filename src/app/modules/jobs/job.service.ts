@@ -16,7 +16,6 @@ const getAllJobs = async (query: Record<string, unknown>) => {
         const sortBy = query.sortBy as string;
         const sortOrder = (query.sortOrder as string) || 'desc';
         const direction = sortOrder === 'asc' ? '' : '-';
-
         modifiedQuery.sort = `${direction}${sortBy}`;
         delete modifiedQuery.sortBy;
         delete modifiedQuery.sortOrder;
