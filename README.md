@@ -90,19 +90,19 @@ npm run dev
 
 ---
 
-## 🌍 Live Deployment
+## Deployment
+
+The application is deployed on a VPS server using:
+
+- Nginx (Reverse Proxy)
+- PM2 (Process Manager)
+- Node.js Production Build
 
 Frontend:
-
-```
 https://quickhire.anaadevelopersltd.com
-```
 
-Backend:
-
-```
+Backend API:
 https://quickhire-api.anaadevelopersltd.com
-```
 
 ---
 
@@ -137,7 +137,6 @@ https://github.com/Ibrahim-Sikder/quickhire-client
 
 ## ✨ Author
 
-Ibrahim Sikder
-Frontend Developer
+Ibrahim Sikder (Frontend Developer)
 
 ---

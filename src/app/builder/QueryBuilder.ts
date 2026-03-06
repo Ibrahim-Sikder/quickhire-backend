@@ -57,7 +57,6 @@ class QueryBuilder<T> {
       sortString = `${direction}${sortBy}`;
     }
 
-    console.log('Sorting with:', sortString);
     this.modelQuery = this.modelQuery.sort(sortString);
     return this;
   }
