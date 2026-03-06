@@ -111,7 +111,7 @@ https://quickhire-api.anaadevelopersltd.com
 Demo (3–5 Minutes):
 
 ```
-https://loom.com/-link
+https://www.loom.com/share/9364700813d842cab3ba460750ae7670
 ```
 
 ### Demo Should Cover:
